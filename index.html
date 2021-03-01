@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>小萌小萱</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta name="keywords" content="嗖嗖身边" />
+    <meta name="description" content="嗖嗖身边" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+    <script type="text/javascript">
+        !function (N, M) { function L() { var a = I.getBoundingClientRect().width; a / F > 540 && (a = 540 * F); var d = a / 10; I.style.fontSize = d + "px", D.rem = N.rem = d } var K, J = N.document, I = J.documentElement, H = J.querySelector('meta[name="viewport"]'), G = J.querySelector('meta[name="flexible"]'), F = 0, E = 0, D = M.flexible || (M.flexible = {}); if (H) { console.warn("将根据已有的meta标签来设置缩放比例"); var C = H.getAttribute("content").match(/initial\-scale=([\d\.]+)/); C && (E = parseFloat(C[1]), F = parseInt(1 / E)) } else { if (G) { var B = G.getAttribute("content"); if (B) { var A = B.match(/initial\-dpr=([\d\.]+)/), z = B.match(/maximum\-dpr=([\d\.]+)/); A && (F = parseFloat(A[1]), E = parseFloat((1 / F).toFixed(2))), z && (F = parseFloat(z[1]), E = parseFloat((1 / F).toFixed(2))) } } } if (!F && !E) { var y = N.navigator.userAgent, x = (!!y.match(/android/gi), !!y.match(/iphone/gi)), w = x && !!y.match(/OS 9_3/), v = N.devicePixelRatio; F = x && !w ? v >= 3 && (!F || F >= 3) ? 3 : v >= 2 && (!F || F >= 2) ? 2 : 1 : 1, E = 1 / F } if (I.setAttribute("data-dpr", F), !H) { if (H = J.createElement("meta"), H.setAttribute("name", "viewport"), H.setAttribute("content", "initial-scale=" + E + ", maximum-scale=" + E + ", minimum-scale=" + E + ", user-scalable=no"), I.firstElementChild) { I.firstElementChild.appendChild(H) } else { var u = J.createElement("div"); u.appendChild(H), J.write(u.innerHTML) } } N.addEventListener("resize", function () { clearTimeout(K), K = setTimeout(L, 300) }, !1), N.addEventListener("pageshow", function (b) { b.persisted && (clearTimeout(K), K = setTimeout(L, 300)) }, !1), "complete" === J.readyState ? J.body.style.fontSize = 12 * F + "px" : J.addEventListener("DOMContentLoaded", function () { J.body.style.fontSize = 12 * F + "px" }, !1), L(), D.dpr = N.dpr = F, D.refreshRem = L, D.rem2px = function (d) { var c = parseFloat(d) * this.rem; return "string" == typeof d && d.match(/rem$/) && (c += "px"), c }, D.px2rem = function (d) { var c = parseFloat(d) / this.rem; return "string" == typeof d && d.match(/px$/) && (c += "rem"), c } }(window, window.lib || (window.lib = {}));
+    </script>
+    <!-- css -->
+    <link href="../public/images/1.jpg" rel="icon" />
+    <link rel="stylesheet" href="../Public/css/swiper.min.css">
+    <style>
+        body {
+            background: #F0F1F5;
+        }
+
+        .content {
+            padding-top: 1.44rem;
+            padding-bottom: 1.96rem;
+            background: #F0F1F5;
+        }
+
+        .content li {
+            margin-top: 0.4rem;
+        }
+
+        .content img {
+            display: block;
+            height: 3.2rem;
+            width: 9.2rem;
+            border-radius: 4px 4px 0 0;
+            margin-left: 4%;
+        }
+
+        .content p {
+            width: 9.2rem;
+            height: 0.8rem;
+            line-height: 0.8rem;
+            margin-left: 4%;
+            background: #fff;
+            border-radius: 0 0 4px 4px;
+            text-align: center;
+            color: #333333;
+            font-size: 0.3733rem;
+            /*padding: 0 .3rem;*/
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .content a {
+            color: #333333;
+            text-decoration: none;
+            font-size: 0.3733rem;
+        }
+
+        footer {
+            height: 1.7067rem;
+            width: 100%;
+            background: #f0f1f5;
+            position: fixed;
+            bottom: 0;
+            padding-left: 4%;
+            z-index: 99;
+        }
+
+        footer .add-btn {
+            display: block;
+            width: 92%;
+            height: 1.1733rem;
+            line-height: 1.1733rem;
+            border-radius: 4px;
+            font-size: 0.48rem;
+            text-align: center;
+            /*text-indent: 3.6533rem;*/
+            /*background: url('https://soupublic.oss-cn-beijing.aliyuncs.com/public/Souread/image/icon-addAd.png') no-repeat 3.12rem 0.38rem #FF8903;
+                background-size: 0.4133rem 0.4133rem;*/
+            background: #FF8903;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .empty {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 66;
+            background: #fff;
+            display: none;
+        }
+
+        .empty img {
+            width: 3.8667rem;
+            height: 4.2667rem;
+            position: absolute;
+            left: 30.67%;
+            top: 3.5733rem;
+        }
+
+        .empty p {
+            font-family: PingFangSC-Regular;
+            font-size: .4rem;
+            line-height: .56rem;
+            color: #AAAAAA;
+            position: absolute;
+            top: 8.32rem;
+            left: 36.13%;
+        }
+
+        /*提示弹窗*/
+        .prompt {
+            color: #fff;
+            font-size: .4533rem;
+            width: 5.3333rem;
+            height: 1.44rem;
+            line-height: 1.44rem;
+            text-align: center;
+            opacity: 0.69;
+            background: #000000;
+            border-radius: 6px;
+            position: fixed;
+            z-index: 99;
+            /*top: 6.4533rem;*/
+            top: 4.4533rem;
+            left: 23.467%;
+            display: none;
+        }
+
+        /*nav切换*/
+        nav {
+            width: 100%;
+            height: 1.1733rem;
+            background: #FFFFFF;
+            overflow-x: auto;
+            position: fixed;
+            top: 0;
+            z-index: 99;
+        }
+
+        nav #list {
+            position: absolute;
+            white-space: nowrap;
+            /*width: 86.6667%;*/
+            width: 100vw;
+            height: 1.1733rem;
+            display: inline-block;
+        }
+
+        nav #list a {
+            white-space: nowrap;
+            display: inline-block;
+            padding: 0 .0533rem;
+            color: #666666;
+            text-decoration: none;
+            font-size: .4rem;
+            line-height: 1.1733rem;
+            height: 1.1733rem;
+            margin-left: 14.85%;
+            box-sizing: border-box;
+            font-family: PingFangSC-Regular;
+            font-weight: normal;
+        }
+
+        nav #list a:nth-of-type(1) {
+            margin-left: 8.5%;
+        }
+
+        .nav-active {
+            color: #FF8903 !important;
+            background: url(https://soupublic.oss-cn-beijing.aliyuncs.com/public/Souread/image/read-1.png) no-repeat left bottom;
+            background-size: 100% 3px;
+            font-size: 0.4267rem;
+        }
+    </style>
+</head>
+
+<body>
+    
+    123123123
+
+
+    <!-- js -->
+    <script src="../Public/js/jquery.min.js"></script>
+    <script src="../Public/js/swiper.min.js"></script>
+    <!-- <script src="../Public/js/layer.js"></script> -->
+    <script src="../Public/js/clipboard.min.js"></script>
+    <script>
+
+
+    </script>
+</body>
+
+</html>
